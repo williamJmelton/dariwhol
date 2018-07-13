@@ -1,0 +1,44 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    [ngClass]="{hidden: !(isHandset | async)!.matches}"
+    fixedInViewport="true"
+    [attr.role]="isHandset ? 'dialog' : 'navigation'"
+    [mode]="(isHandset | async)!.matches ? 'over' : 'side'"
+    [opened]="!(isHandset | async)!.matches">
+    <mat-toolbar color="primary">Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="">Home</a>
+      <a mat-list-item routerLinkActive="active" routerLink="/open-account">Open Account</a>
+      <a mat-list-item routerLinkActive="active" routerLink="/sales">View Sales</a>
+      <a mat-list-item routerLinkActive="active" routerLink="/mailing-list">E-Mail List</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+        <img class="logo-img" src="assets/logo.png">
+        <span class="example-spacer"></span>
+        <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="(isHandset | async)!.matches">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+
+      <!-- <mat-toolbar-row class="toolbar-large">
+        <div class="toolbar-large">
+          <span></span>
+          <span class="example-spacer"></span>
+          <button mat-button routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="">Home</button>
+          <button mat-button routerLinkActive="active" routerLink="/open-account">Open Account</button>
+          <button mat-button routerLinkActive="active" routerLink="/sales">View Sales</button>
+          <button mat-button routerLinkActive="active" routerLink="/mailing-list">Mailing List</button>
+        </div>
+      </mat-toolbar-row> -->
+    </mat-toolbar>
+  </mat-sidenav-content>
+  <ng-content></ng-content>
+</mat-sidenav-container>

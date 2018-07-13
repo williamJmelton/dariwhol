@@ -1,0 +1,14 @@
+.controlsContainer {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  button {
+    margin: 10px 20px;
+  }
+  span {
+    margin: 0 auto;
+    color: white;
+  }
+}

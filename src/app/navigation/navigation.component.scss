@@ -1,0 +1,20 @@
+@import '~@angular/material/theming';
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.logo-img {
+  margin-top: 100px;
+}
+
+.active {
+  color: white;
+}
+
+mat-toolbar {
+  @include mat-elevation(8);
+}

@@ -1,0 +1,8 @@
+<div class="controlsContainer">
+  <button mat-raised-button (click)="prevPage()" [disabled]="page === 1">Prev</button>
+  <span>{{ page }} / {{ totalPages }}</span>
+  <button mat-raised-button (click)="nextPage()" [disabled]="page === totalPages">Next</button>
+</div>
+<div *ngIf="isLoaded" style="text-align: center;">
+</div>
+<pdf-viewer src="../../assets/june.pdf" [show-all]="false" [page]="page" (after-load-complete)="afterLoadComplete($event)"></pdf-viewer>

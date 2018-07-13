@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+//@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+//@import "dari-theme.scss";
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0px;
+  //background-color: rgba(48, 48, 48, 1.000);
+  background-color: rgba(66, 66, 66, 1.000);
+}
+
+mat-form-field.mat-form-field {
+  color:#423933 !important;
+}

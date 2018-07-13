@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <img class="logo-img" src="assets/logo.png">
+  </mat-toolbar-row>
+
+  <mat-toolbar-row>
+    <span></span>
+    <span class="example-spacer"></span>
+    <!--<a routerLink=""><mat-icon class="example-icon">home</mat-icon></a>-->
+    <button mat-button routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="">Home</button>
+    <button mat-button routerLinkActive="active" routerLink="/open-account">Open Account</button>
+    <button mat-button routerLinkActive="active" routerLink="/sales">View Sales</button>
+    <button mat-button routerLinkActive="active" routerLink="/mailing-list">Mailing List</button>
+  </mat-toolbar-row>
+</mat-toolbar>

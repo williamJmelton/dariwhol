@@ -1,0 +1,87 @@
+@import '~@angular/material/theming';
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+.form-full-width {
+  width: 100%;
+}
+.flex-container__center {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  color: lightgray;
+  margin: 0px auto;
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+.blurb {
+  width: 80%;
+}
+mat-card {
+  height: 80%;
+  margin: 24px 12px;
+  background-color: #6e6e6e;
+  text-align: center;
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+  }
+}
+.mat-image {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #ff9800;
+  @include mat-elevation(8);
+  height: 100px;
+  z-index: 2;
+  position: relative;
+}
+
+.blurb-header {
+  font-family: 'Lobster', cursive;
+  font-size: 2.5rem;
+  height: 100px;
+  width: 100%;
+}
+
+.lobster-font {
+  font-family: 'Lobster', cursive;
+}
+
+.font-big {
+  font-size: 4rem;
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    font-size: 2.5rem;
+  }
+}
+
+ngx-slick {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.product-text {
+  text-align: center;
+}
+
+.product-container {
+  height: 100%;
+}
+
+.product-image {
+  margin: 0 auto;
+}

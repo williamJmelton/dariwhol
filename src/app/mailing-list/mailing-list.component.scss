@@ -1,0 +1,30 @@
+.flex-center {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: transparent;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+#mc_embed_signup {
+  width: 100%;
+}
+
+mat-card {
+  background: white;
+  width: 90%;
+  margin-top: 20px;
+}
+
+flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  flex-grow: 1;
+  max-width: 80%;
+}

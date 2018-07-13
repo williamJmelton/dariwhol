@@ -1,0 +1,45 @@
+mat-form-field.mat-form-field.ng-valid {
+  color: green;
+}
+
+mat-form-field.mat-form-field {
+  color:#423933 !important;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 100%;
+  width: 100%;
+}
+
+.form-full-width {
+  width: 100%;
+}
+
+.form-container {
+  display: flex;
+  margin-top: 5%;
+  justify-content: center;
+  padding-bottom: 30px;
+  color: #423933;
+}
+
+mat-input-container label {
+  color: #423933 !important;
+}
+
+.btn-container {
+  display: flex;
+  margin-top: 12px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+mat-card {
+  background:#6e6e6e;
+  color: #423933;
+  flex-grow: 1;
+  max-width: 80%;
+}

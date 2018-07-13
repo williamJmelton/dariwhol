@@ -1,0 +1,87 @@
+<div class="form-container">
+    <mat-card>
+        <form (ngSubmit)="onSubmit(form)" #form="ngForm" class="example-form">
+            <mat-form-field class="form-full-width">
+                <input [(ngModel)]="storeName" name="storeName" required matInput placeholder="Store Name">
+            </mat-form-field>
+
+            <table class="form-full-width" cellspacing="0">
+                <tr>
+                    <td>
+                        <mat-form-field class="form-full-width">
+                            <input required name="firstName" [(ngModel)]="firstName" matInput placeholder="First name">
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field class="form-full-width">
+                            <input [(ngModel)]="lastName" name="lastName" required matInput placeholder="Last Name">
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field class="form-full-width">
+                            <input matInput placeholder="Email" required email name="email" [(ngModel)]="email">
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field class="form-full-width">
+                            <!--<span matPrefix>+1 &nbsp;</span>-->
+                            <input matInput required [(ngModel)]="storePhone" name="storePhone" pattern="^\d{3}-\d{3}-\d{4}$" placeholder="Phone Number">
+                            <mat-hint align="end">format: xxx-xxx-xxxx</mat-hint>
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field class="form-full-width">
+                            <input matInput required [(ngModel)]="cellPhone" name="cellPhone" pattern="^\d{3}-\d{3}-\d{4}$" placeholder="Cellphone Number">
+                            <mat-hint align="end">format: xxx-xxx-xxxx</mat-hint>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field class="form-full-width">
+                            <input [(ngModel)]="taxId" name="taxId" required matInput maxlength="9" #taxid pattern="^\d{9}$" placeholder="Tax ID Number">
+                            <mat-hint align="end">{{taxid.value.length}} / 9</mat-hint>
+                        </mat-form-field>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="form-full-width" cellspacing="0">
+                <tr>
+                    <td>
+                        <mat-form-field class="form-full-width">
+                            <input [(ngModel)]="street" name="street" required matInput placeholder="Street">
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field class="form-full-width">
+                            <input [(ngModel)]="city" name="city" required matInput placeholder="City">
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field class="form-full-width">
+                            <input [(ngModel)]="state" name="state" required matInput placeholder="State">
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field class="form-full-width">
+                            <input [(ngModel)]="zip" name="zip" required matInput #postalCode maxlength="5" placeholder="Zip Code" value="">
+                            <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+                        </mat-form-field>
+                    </td>
+                </tr>
+            </table>
+            <div class="btn-container">
+                <button mat-raised-button color="primary" type="submit">Submit</button>
+                <span class="spacer"></span>
+                <button mat-raised-button color="warn" type="reset">Clear</button>
+            </div>
+        </form>
+    </mat-card>
+</div>
