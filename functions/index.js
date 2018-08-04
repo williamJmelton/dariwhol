@@ -31,7 +31,7 @@ exports.newCustomer = functions.firestore
 // setup email data with unicode symbols
     let mailOptions = {
       from: '"Dari Wholesales" <josh@dariwholesales.com>', // sender address
-      to: 'josh@dariwholesales.com', // list of receivers
+      to: 'josh@dariwholesales.com, williamjmelton617@gmail.com', // list of receivers
       subject: 'Account Confirmation ✔', // Subject line
       text: 'Welcome to Dari Wholesales!', // plain text body
       template: 'email',

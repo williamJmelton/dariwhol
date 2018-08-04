@@ -54,15 +54,22 @@ mat-card {
   font-family: 'Lobster', cursive;
   font-size: 2.5rem;
   height: 100px;
-  width: 100%;
+  max-width: 100%;
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    height: 30px;
+    font-size: 1.5rem;
+  }
 }
 
 .lobster-font {
   font-family: 'Lobster', cursive;
+  color: white;
 }
 
 .font-big {
   font-size: 4rem;
+  color: white;
   @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     font-size: 2.5rem;
@@ -84,4 +91,13 @@ ngx-slick {
 
 .product-image {
   margin: 0 auto;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: center;
+}
+
+address {
+  margin: auto auto;
 }
