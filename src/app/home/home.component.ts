@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FirebaseService} from '../firebase.service';
+import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,8 @@ import {FirebaseService} from '../firebase.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  constructor(private _firebase: FirebaseService, private breakpointObserver: BreakpointObserver) {}
+  isHandset: Observable<BreakpointState> = this.breakpointObserver.observe(Breakpoints.Handset);
   slides = [
     {
       img: '/assets/items/fronto.png',
@@ -33,7 +37,10 @@ export class HomeComponent implements OnInit {
       text: 'Kettlecorn Snacks'
     }
   ];
-  slideConfig = {'slidesToShow': 4, 'slidesToScroll': 3};
-  constructor(private _firebase: FirebaseService) {}
-  ngOnInit() {}
+  slideConfig = {'slidesToShow': 2, 'slidesToScroll': 2};
+  ngOnInit() {
+    this.isHandset.subscribe(val => {
+      console.log(val);
+    })
+  }
 }

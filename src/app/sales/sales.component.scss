@@ -1,5 +1,6 @@
 .controlsContainer {
   position: fixed;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,4 +12,9 @@
     margin: 0 auto;
     color: white;
   }
+}
+
+
+.container {
+  max-width: 100vw;
 }

@@ -23,7 +23,6 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { FooterComponent } from './footer/footer.component';
 import { SalesComponent } from './sales/sales.component';
 import { MailingListComponent } from './mailing-list/mailing-list.component';
-import { NavComponent } from './nav/nav.component';
 
 // Service Imports
 import {FirebaseService} from './firebase.service';
@@ -55,8 +54,7 @@ import { LayoutModule } from '@angular/cdk/layout';
     HomeComponent,
     FormResultComponent,
     SalesComponent,
-    MailingListComponent,
-    NavComponent
+    MailingListComponent
   ],
   imports: [
     BrowserModule,
@@ -85,6 +83,6 @@ import { LayoutModule } from '@angular/cdk/layout';
 
   ],
   providers: [FirebaseService],
-  bootstrap: [AppComponent, NavComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
